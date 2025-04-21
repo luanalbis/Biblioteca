@@ -1,0 +1,2 @@
+final String remetente = "library.verificar.email@gmail.com";
+final String senha = "kgsw ylhi kwqq sscy";

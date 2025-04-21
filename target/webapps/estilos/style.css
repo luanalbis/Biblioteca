@@ -1,0 +1,1096 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+	;
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: #333333; /* Cor de texto mais suave */
+	background-color: #f9f0f9; /* Cor de fundo suave, rosa claro */
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.inicioContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px; /* espaço entre imagem e botão */
+	margin-top: 50px;
+}
+
+.ImgInicio {
+	width: 300px; /* ajuste o tamanho da imagem como quiser */
+	height: auto;
+	border-radius: 10px;
+}
+
+.loginContainer {
+	display: flex;
+	flex-direction: column; /* Organiza os inputs uma em cima do outro */
+	gap: 8px; /* Espaçamento entre os inputs */
+	width: 100%;
+	max-width: 300px;
+}
+
+.senhaWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.senhaInput {
+	width: 100%;
+	padding-right: 40px; /* espaço para o ícone */
+}
+
+.BotaoOlho {
+	position: absolute;
+	right: 10px;
+	top: 40%;
+	transform: translateY(-50%);
+	width: 15px;
+	cursor: pointer;
+}
+
+/* Botões lado a lado */
+.botaoLoginContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/* Distribui os botões com espaço entre eles */
+	gap: 10px;
+	/* Distribui os botões com espaço entre eles */
+	gap: 10px;
+	/* Ajusta o espaçamento entre os botões */
+	width: 100%;
+}
+
+.cadastroContainer {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;;
+	flex-direction: column;
+	/* Organiza os inputs uma em cima do outro */
+	gap: 8px; /* Espaçamento entre os inputs */
+	width: 220px;
+	max-width: 220px;
+}
+
+/* Estilos para os botões */
+.BotaoEntrar, .BotaoCadastrar {
+	flex: 1; /* Faz os botões ocuparem o mesmo espaço */
+	font-size: 1em;
+	padding: 10px;
+	background-color: #f78da7;
+	color: white;
+	border: 2px solid #f36f7e;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.1s, transform 0.1s ease;
+	display: inline-block; /* necessário pro <a> ficar igual ao input */
+}
+
+.BotaoEntrar:hover, .BotaoCadastrar:hover {
+	background-color: #f36f7e;
+	transform: scale(1.01);
+}
+
+.mensagenLoginInexistente {
+	margin-top: 12px;
+	color: #b00020;
+	font-size: 0.9em;
+	font-weight: 500;
+	text-align: center;
+	text-decoration: none;
+}
+
+.mensagemSenhaIncorreta {
+	display: block;
+	margin-top: 14px;
+	font-size: 0.8em;
+	color: #b00020;
+	text-align: center;
+	font-weight: 400;
+	text-decoration: underline;
+	transition: transform 0.1s ease;
+	border: none;
+	background-color: none;
+}
+
+.mensagemSenhaIncorreta:hover {
+	transform: scale(1.01);
+}
+
+.mensagemEmailEnviado {
+	display: block;
+	margin-top: 14px;
+	font-size: 0.7em;
+	font-weight: 400;
+	color: #b00020;
+	text-align: center;
+	font-weight: 400;
+	text-decoration: underline;
+	transition: transform 0.1s ease;
+}
+
+.mensagemEmailEnviado:hover {
+	transform: scale(1.01);
+}
+
+.BotoesPaginaCadastroContainer {
+	display: flex;
+	width: 100%;
+	gap: 20px;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.BotaoPaginaCadastro {
+	flex: 1;
+	font-size: 0.9em;
+	background-color: #f78da7;
+	color: white;
+	border: 2px solid #f36f7e;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	box-sizing: border-box;
+	transition: background-color 0.1s, transform 0.1s ease-in-out;
+	display: inline-block; /* necessário pro <a> ficar igual ao input */
+	width: 100px;
+}
+
+.BotaoPaginaCadastro:hover {
+	background-color: #f36f7e;
+	transform: scale(1.01);
+}
+
+/* Menu do cabeçalho */
+.cabecalhoContainer {
+	width: 100%; /* Garante que ocupe toda a largura da tela */
+	padding: 10px 16px; /* Adiciona um pequeno padding nas laterais */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fce4ec; /* Cor de fundo do menu */
+	box-sizing: border-box;
+	overflow: hidden; /* Impede que qualquer coisa vaze */
+}
+
+/* Informações do usuário */
+.usuarioInfo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%; /* Garante que a largura ocupe o espaço disponível */
+	box-sizing: border-box;
+}
+
+/* Nome do usuário */
+.usuarioNome {
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 16px;
+	color: #333;
+}
+
+/* Botão do menu mobile */
+.menuToggle {
+	background: none;
+	border: none;
+	font-size: 30px; /* Ajuste o tamanho do ícone */
+	color: #333;
+	cursor: pointer;
+	display: none; /* Esconde o botão no desktop */
+}
+
+/* Menu dropdown */
+.menuDropdown {
+	display: flex;
+	gap: 20px; /* Espaçamento entre os links do menu */
+	list-style: none;
+	margin-left: auto; /* Garante que o menu se alinhe à direita */
+	padding: 0;
+}
+
+.menuDropdown li {
+	position: relative;
+	/* Necessário para ajustar os itens dentro do menu */
+}
+
+.menuDropdown li a {
+	text-decoration: none;
+	color: #333;
+	padding: 10px 16px;
+	border-radius: 4px;
+	transition: background 0.1s;
+	display: block;
+}
+
+.menuDropdown li a:hover {
+	background-color: #f36f7e;
+	color: #fff;
+}
+
+.BotoesAdicionarContainer {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.Botao1 {
+	flex: 1;
+	font-size: 1em;
+	background-color: #f78da7;
+	color: white;
+	border: 2px solid #f36f7e;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	box-sizing: border-box;
+	transition: background-color 0.1s, transform 0.2s ease-in-out;
+	display: inline-block; /* necessário pro <a> ficar igual ao input */
+	max-width: 150px;
+}
+
+.Botao1:hover {
+	background-color: #f36f7e;
+	transform: scale(1.01);
+}
+
+.BotoesAtualizarContainer {
+	display: flex;
+	justify-content: center; /* Centraliza os botões */
+	align-items: center;
+	max-height: 10px;
+	gap: 25px; /* Espaço uniforme entre eles */
+	margin-top: 20px;
+	gap: 25px;
+}
+
+.BotaoAtualizar {
+	flex: 1;
+	font-size: 1em;
+	background-color: #f78da7;
+	color: white;
+	border: 2px solid #f36f7e;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	box-sizing: border-box;
+	transition: background-color 0.1s, transform 0.1s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center; /* ⬅️ novo */
+	max-width: 150px;
+	height: 50px;
+}
+
+.BotaoAtualizar:hover {
+	background-color: #f36f7e;
+	transform: scale(1.01);
+}
+
+.Botao2 {
+	font-size: 0.8em;
+	padding: 8px 16px;
+	width: 100px;
+	background-color: #f4b0c2; /* Rosa mais claro */
+	text-decoration: none;
+	color: white;
+	border: 1px solid #e0a2b7; /* Cor de borda sutil */
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.1s, transform 0.1s ease-in-out;
+}
+
+.Botao2:hover {
+	background-color: #e0a2b7; /* Mudança de cor no hover */
+	transform: scale(1.01);
+}
+
+.BotaoVoltarContainer {
+	text-align: center;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.BotaoVoltarContainer .Botao1 {
+	display: inline-block;
+	background-color: #f78da7;
+	color: white;
+	border: 2px solid #f36f7e;
+	border-radius: 10px;
+	padding: 10px 30px;
+	font-size: 1em;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.1s, transform 0.1s ease-in-out;
+	max-width: 160px; /* Limita a largura máxima */
+	width: 100%;
+	/* Faz o botão ocupar toda a largura disponível no modo mobile */
+}
+
+.BotaoVoltarContainer .Botao1:hover {
+	background-color: #f36f7e;
+	transform: scale(1.01);
+}
+
+h1 {
+	color: #d36d88;
+	/* Tom de rosa forte, criando contraste sem ser muito agressivo */
+	text-align: center;
+	margin-top: 20px;
+	font-size: 2em;
+}
+
+#tabela {
+	border-collapse: collapse;
+	width: 80%; /* Ajustei a largura para melhor adaptação */
+	max-width: 1000px;
+	margin: 40px auto;
+	background-color: #ffffff;
+	border-radius: 25px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#tabela th {
+	border: 1px solid #e4b0c5; /* Borda sutil em rosa */
+	padding: 12px;
+	text-align: center;
+	background-color: #f8c1d0; /* Rosa suave para o cabeçalho */
+	color: #6b3a5f; /* Cor de texto escura para contraste */
+}
+
+#tabela td {
+	border: 1px solid #e4b0c5; /* Borda sutil em rosa */
+	padding: 8px;
+	text-align: center;
+	background-color: #f8d8df; /* Rosa muito claro para as células */
+	color: #6b3a5f; /* Cor escura para contraste */
+}
+
+#tabela tr:nth-child(even) {
+	background-color: #f8c1d0;
+	/* Linhas alternadas com cores diferentes para destacar */
+}
+
+#tabela tr:hover {
+	background-color: #f36f7e; /* Cor ao passar o mouse */
+	color: white;
+}
+
+.tabelaDetalhes {
+	border-collapse: collapse;
+	width: 80%; /* Ajustei a largura para melhor adaptação */
+	max-width: 1000px;
+	margin: 40px auto;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.tabelaDetalhes th {
+	border: 1px solid #e4b0c5; /* Borda sutil em rosa */
+	padding: 12px;
+	text-align: center;
+	background-color: #f8c1d0; /* Rosa suave para o cabeçalho */
+	color: #6b3a5f; /* Cor de texto escura para contraste */
+}
+
+.tabelaDetalhes td {
+	border: 1px solid #e4b0c5; /* Borda sutil em rosa */
+	padding: 8px;
+	text-align: center;
+	background-color: #fdd8e0; /* Rosa muito claro para as células */
+	color: #6b3a5f; /* Cor escura para contraste */
+}
+
+.tabelaDetalhes tr:nth-child(even) {
+	background-color: #f8c1d0;
+	/* Linhas alternadas com cores diferentes para destacar */
+}
+
+.tabelaDetalhes tr:hover {
+	background-color: #f36f7e; /* Cor ao passar o mouse */
+	color: white;
+}
+
+.Caixa1 {
+	width: 220px;
+	padding: 12px;
+	margin-bottom: 10px;
+	border: 2px solid #e0a2b7; /* Cor de borda suave em rosa */
+	border-radius: 10px;
+	text-align: center;
+	background-color: #f4b0c2; /* Rosa claro */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.Caixa1:focus {
+	outline: none;
+	border-color: #f36f7e; /* Cor da borda ao focar na caixa */
+}
+
+.Caixa1::placeholder {
+	color: #910937;
+}
+
+select.Caixa1 {
+	width: 100%;
+	padding: 10px;
+	font-size: 0.9em;
+	border: 1px solid #f78da7;
+	border-radius: 8px;
+	background-color: #f4b0c2;
+	color: #333333;
+	box-sizing: border-box;
+	appearance: auto; /* mantêm a setinha padrão */
+	-webkit-appearance: menulist;
+	/* força aparência padrão no Chrome/Safari */
+	-moz-appearance: menulist; /* força aparência padrão no Firefox */
+	transition: border 0.1s;
+}
+
+select.Caixa1:focus {
+	outline: none;
+	border-color: #f36f7e;
+	background-color: #f4b0c2; /* garante que o foco mantenha o fundo */
+}
+
+.OpcoesContainer {
+	display: flex; /* Usando flexbox para alinhar os itens */
+	justify-content: space-around;
+	/* Distribui o espaço igualmente entre os botões */
+	align-items: center; /* Alinha os botões verticalmente ao centro */
+	width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
+	text-decoration: none;
+}
+
+.BotaoFoto {
+	width: 1.2em; /* Ajuste o tamanho do botão conforme necessário */
+	height: 1.2em; /* Ajuste o tamanho do botão conforme necessário */
+	object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+	border: none;
+	background: none;
+	cursor: pointer;
+	/* Altera o cursor para indicar que o botão é clicável */
+	transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.BotaoFoto:hover {
+	transform: scale(1.01);
+	/* Aumenta o botão quando o mouse passa sobre ele */
+	opacity: 0.8; /* Levemente transparente */
+}
+
+.CaixaDescricao {
+	width: 100%;
+	min-height: 100px;
+	max-height: 400px;
+	resize: none;
+	padding: 10px;
+	margin: 0; /* Remove espaço externo */
+	border: 2px solid #f36f7e;
+	border-radius: 10px;
+	background-color: #fef2f5;
+	box-sizing: border-box;
+	font-size: 1em;
+	color: #6b3a5f;
+}
+
+.CaixaDescricao:focus {
+	outline: none;
+}
+
+.CaixaDescricao::-webkit-scrollbar {
+	display: none;
+}
+
+.perfil-wrapper {
+	max-width: 600px;
+	margin: 40px auto;
+	background: white;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.fotoeNomePerfilContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	gap: 5px;
+}
+
+.fotoPerfilMenuContainer {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	border: 1px solid #f36f7e;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden; /* garante que a imagem não passe da borda redonda */
+}
+
+.fotoPerfilMenu img {
+	width: 60%;
+	height: 60%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.usuarioNome {
+	margin-top: 5px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	text-align: center;
+	font-size: 14px;
+}
+
+.perfil-foto-container {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 1px solid #f36f7e;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 20px;
+	overflow: hidden; /* garante que a imagem não passe da borda redonda */
+}
+
+.perfil-foto {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.perfil-info {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.perfil-info p {
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+.btn-editar {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #f78da7;
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: background-color 0.1s;
+}
+
+.btn-editar:hover {
+	background-color: #f36f7e;
+}
+
+.editarperfilConteiner {
+	display: flex;
+	flex-direction: column;
+}
+
+.perfil-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.perfil-info p {
+	font-weight: 500;
+}
+
+.botoesEditarPerfilConteiner {
+	display: flex; /* Usando flexbox para alinhar os itens */
+	justify-content: space-between;
+	/* Distribui o espaço igualmente entre os botões */
+	align-items: center; /* Alinha os botões verticalmente ao centro */
+	width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
+	text-decoration: none;
+	gap: 16px
+}
+
+.botoesEditarPerfil {
+	flex: 1;
+	font-size: 1em;
+	background-color: #f78da7;
+	color: white;
+	border: 2px solid #f36f7e;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	box-sizing: border-box;
+	transition: background-color 0.1s transform 0.1s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 150px;
+	height: 50px;
+}
+
+.botoesEditarPerfil:hover {
+	background-color: #f36f7e;
+	transform: scale(1.01);
+}
+
+.botaoEditarFotoConteiner {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 0.5rem;
+	flex-direction: row;
+	max-height: 30px;
+}
+
+/* Esconde o input nativo */
+.inputFileHidden {
+	display: none;
+}
+
+/* Estiliza o label como botão */
+.botaoEditarFoto {
+	background-color: #f78da7;
+	color: #ffffff;
+	border: none;
+	padding: 8px 8px;
+	font-size: 0.7rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.1s ease;
+	font-weight: 500;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.botaoEditarFoto:hover {
+	background-color: #f36f7e;
+}
+
+.botaoFiltroToggle:hover {
+	background-color: #fbd1e0;
+}
+
+.filtroWrapper {
+	width: 80%;
+	align-self: center;
+	margin: 20px 0px;
+	/* garante alinhamento à esquerda */
+}
+
+.tabelaDetalhesConteiner {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.botaoFiltroToggle {
+	background-color: #fdf2f6; /* rosa muito clara */
+	color: #333;
+	padding: 6px 14px;
+	font-size: 14px;
+	border: 1px solid #f78da7;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.1s ease;
+}
+
+.botaoFiltroToggle:hover {
+	background-color: #fbd1e0;
+}
+
+#filtroContainer {
+	margin-top: 10px;
+}
+
+.filtroBotao {
+	display: inline-block;
+	background-color: #fce8f1;
+	color: #333;
+	padding: 6px 12px;
+	margin: 4px 6px 0 0;
+	font-size: 13px;
+	border: 1px solid #f78da7;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: background-color 0.1s ease;
+}
+
+.filtroBotao:hover {
+	background-color: #fbd1e0;
+}
+
+/* MEDIA QUERY CELULAR */
+@media ( max-width : 600px) {
+	body {
+		margin-top: 80px;
+	}
+	h1 {
+		color: #d36d88;
+		font-size: 1.4em;
+		margin: 10px;
+	}
+	.inicioContainer {
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 20px;
+		width: 100%;
+		padding: 0 10px;
+	}
+	.ImgInicio {
+		width: 200px;
+		max-width: 50%;
+	}
+	.loginContainer {
+		width: 250px;
+		max-width: 300px;
+		gap: 3px; /* Menos espaçamento no mobile */
+	}
+	.botaoLoginContainer {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+		width: 100%;
+		flex-direction: row;
+		width: 100%;
+		gap: 12px; /* Maior espaçamento entre os botões */
+		color: black;
+	}
+	.cadastroContainer {
+		display: flex;
+		flex-direction: column; /* Organiza os inputs uma em cima do outro */
+		gap: 8px; /* Espaçamento entre os inputs */
+		width: 100%;
+		max-width: 80%;
+	}
+	.BotaoEntrar, .BotaoCadastrar {
+		width: 100%; /* Botões ocupando toda a largura disponível */
+	}
+	.cabecalhoContainer {
+		position: fixed; /* Fixa a barra de navegação no topo */
+		top: 0px;
+		left: 0;
+		width: 100%; /* Garante que ocupe toda a largura da tela */
+		margin-bottom: 10px;
+		/* Distância da barra de navegação para o conteúdo abaixo */
+		background-color: #fce4ec; /* Cor de fundo do menu */
+		z-index: 1000;
+		/* Garante que o cabeçalho fique acima de outros conteúdos */
+	}
+
+	/* Estilo do menu dropdown no mobile */
+	.menuDropdown {
+		display: none; /* Esconde o menu dropdown no mobile */
+		position: fixed; /* Fixa o menu no topo da tela */
+		top: 50px; /* Coloca o menu abaixo da barra de navegação */
+		right: 0;
+		background-color: #fce4ec;
+		width: 100%; /* O menu ocupa toda a largura */
+		box-sizing: border-box;
+		padding: 10px;
+		border-radius: 0 0 10px 10px;
+		flex-direction: column;
+		gap: 10px;
+		z-index: 999; /* Garante que o menu fique acima de outros elementos */
+	}
+	.menuToggle {
+		display: block; /* Exibe o botão no mobile */
+	}
+	.menuDropdown.active {
+		display: flex; /* Exibe o menu quando ativado */
+	}
+	.adicionarLivroContainer {
+		width: 100vw; /* Reduz a largura para 90% da tela */
+		margin: 0 auto; /* Centraliza a div */
+		padding: 0px; /* Adiciona um pequeno padding */
+	}
+	.adicionarLivroContainer table {
+		width: 90%; /* A tabela ocupa toda a largura disponível */
+		max-width: 300px;
+		margin: 0 auto; /* Centraliza a tabela */
+	}
+	.adicionarLivroContainer td {
+		padding: 0px; /* Ajusta o padding nas células da tabela */
+		width: 100%; /* As células ocupam toda a largura */
+		text-align: center; /* Centraliza o conteúdo das células */
+	}
+	.adicionarLivroContainer input, .adicionarLivroContainer select,
+		.adicionarLivroContainer textarea {
+		margin: 4px;
+		width: 100%; /* Faz com que os campos ocupem toda a largura */
+		padding: 8px;
+		font-size: 0.75em;
+		box-sizing: border-box; /* Inclui padding e border no tamanho total */
+	}
+	.adicionarLivroContainer select {
+		-webkit-appearance: menulist;
+		/* Força o estilo padrão no Chrome/Safari */
+		-moz-appearance: menulist; /* Força o estilo padrão no Firefox */
+	}
+
+	/* Ajustando o botão para ter a mesma largura */
+	.BotoesAdicionarContainer {
+		margin: 0;
+		text-align: center; /* Centraliza o botão */
+	}
+	.BotoesAdicionarContainer input, .BotoesAdicionarContainer a {
+		text-align: center;
+		padding: 10px;
+		font-size: 0.8em;
+		box-sizing: border-box; /* Para que o padding não altere o tamanho */
+		max-width: 100px;
+	}
+	.BotoesAdicionarContainer {
+		flex-direction: row;
+		align-items: center;
+		gap: 5px;
+		width: 100%;
+	}
+	.BotoesAtualizarContainer {
+		margin: 0;
+		text-align: center; /* Centraliza o botão */
+	}
+	.BotoesAtualizarContainer input, .BotoesAtualizarContainer a {
+		text-align: center;
+		padding: 10px;
+		font-size: 0.8em;
+		box-sizing: border-box; /* Para que o padding não altere o tamanho */
+		max-width: 100px;
+	}
+	.BotoesAtualizarContainer {
+		flex-direction: row;
+		align-items: center;
+		gap: 5px;
+		width: 100%;
+		margin-top: 15px;
+	}
+	.BotaoVoltarContainer {
+		width: 70%; /* Garantir que a largura da container seja 100% */
+		padding: 0 10px;
+		/* Ajusta o padding para não ficar colado nas bordas */
+	}
+	.BotaoVoltarContainer .Botao1 {
+		width: 100%; /* Faz o botão ocupar toda a largura disponível */
+		max-width: 250px; /* Limita o tamanho do botão */
+		padding: 12px;
+		font-size: 1.1em; /* Aumenta o tamanho da fonte no mobile */
+	}
+	/* Outras partes da query para os outros botões, se necessário */
+	.Botao1 {
+		width: auto; /* Mantém o comportamento padrão dos botões */
+	}
+	.BotoesContainer {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+	}
+	.Botao2 {
+		flex: 1;
+		padding: 8px;
+		font-size: 0.75em;
+		max-width: 120px;
+		text-align: center;
+	}
+	#tabela {
+		width: 100%;
+		margin: 10px auto;
+		padding: 0 2px;
+		box-sizing: border-box;
+		font-size: 0.8em;
+		border-radius: 0;
+		box-shadow: none;
+		table-layout: fixed;
+	}
+	#tabela td {
+		font-size: 0.86em;
+		font-weight: 600;
+		max-width: 80px;
+		padding: 6px;
+		word-break: break-word;
+		overflow-wrap: break-word;
+		white-space: normal;
+		text-align: center;
+	}
+
+	/* Oculta colunas Nº e Autor */
+	#tabela th:nth-child(1), #tabela td:nth-child(1), #tabela th:nth-child(3),
+		#tabela td:nth-child(3), #tabela th:nth-child(5), #tabela td:nth-child(5)
+		{
+		display: none;
+	}
+	.tabelaDetalhes {
+		background-color: #f78da7; /* rosa mais forte e visível */
+		border-collapse: collapse;
+		width: 98%;
+		border-radius: 8px;
+		overflow: hidden;
+		margin: 0;
+	}
+	.tabelaDetalhes th {
+		background-color: #f8c1d0; /* rosa escuro para contraste */
+		padding: 3px;
+		text-align: center;
+		color: #6b3a5f;
+		font-size: 0.85em;
+	}
+	.tabelaDetalhes td {
+		background-color: #fdd8e0; /* tom intermediário para células */
+		color: #333;
+		padding: 10px 2px;
+		border: 1px solid #f3b6c1;
+		font-size: 0.70em;
+		word-wrap: break-word;
+		white-space: normal;
+		font-weight: bold;
+	}
+	textarea.CaixaDescricao {
+		background-color: #fff0f5; /* rosinha claro */
+		border: 2px solid #f36f7e;
+		resize: none;
+	}
+	.CaixaDescricao {
+		max-width: 100%;
+		padding: 10px 10px;
+		box-sizing: border-box;
+	}
+	.CaixaDescricao {
+		font-size: 0.8em;
+		min-height: 100px;
+	}
+	.OpcoesContainer {
+		flex-direction: row;
+		gap: 2px;
+		padding: 0px 0px;
+		justify-content: space-between;
+	}
+	.BotaoFoto {
+		width: 1.5em;
+		height: 1.5em;
+	}
+	.perfil-wrapper {
+		margin: 0;
+		margin-top: 10px;
+		padding: 20px;
+		width: 180px;
+	}
+	.perfil-foto-container {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		border: 1px solid #f36f7e;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 20px;
+		overflow: hidden;
+		/* garante que a imagem não passe da borda redonda */
+	}
+	.perfil-foto {
+		width: 60%;
+		height: 60%;
+		object-fit: contain;
+		object-position: center;
+	}
+	.perfil-info p {
+		font-size: 1em;
+		font-weight: bold;
+	}
+	.filtroWrapper {
+		width: 98%;
+		align-self: center;
+		margin: 20px 0px;
+		/* garante alinhamento à esquerda */
+	}
+	.tabelaDetalhesConteiner {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+	}
+	.botaoFiltroToggle {
+		background-color: #fdf2f6; /* rosa muito clara */
+		color: #333;
+		padding: 6px 10px;
+		font-size: 0.8em;
+		border: 1px solid #f78da7;
+		cursor: pointer;
+		transition: background-color 0.1s ease;
+	}
+	.botaoFiltroToggle:hover {
+		background-color: #fbd1e0;
+	}
+	#filtroContainer {
+		margin-top: 5px;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		gap: 10px;
+	}
+	.filtroBotao {
+		flex: 1; /* Faz cada botão crescer igualmente */
+		text-align: center;
+		background-color: #fce8f1;
+		color: #333;
+		padding: 6px 6px;
+		margin: 5px 1px 0 0;
+		font-size: 0.70em;
+		border: 1px solid #f78da7;
+		text-decoration: none;
+		border-radius: 4px;
+		transition: background-color 0.1s ease;
+	}
+	.filtroBotao:hover {
+		background-color: #fbd1e0;
+	}
+}
