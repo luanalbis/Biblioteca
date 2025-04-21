@@ -49,12 +49,10 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.3.1</version>
 				<configuration>
-					<!-- Define a estrutura do WAR -->
 					<webappDirectory>${project.build.directory}/webapps</webappDirectory>
 				</configuration>
 			</plugin>
 
-			<!-- Configuração do plugin de compilação para usar o Java 17 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -66,4 +64,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
