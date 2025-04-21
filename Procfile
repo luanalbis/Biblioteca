@@ -1,1 +1,3 @@
-web: java -jar target/*.jar
+web: java -jar target/Biblioteca-0.01-SNAPSHOT.war
+
+
